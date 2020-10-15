@@ -1,3 +1,1 @@
-# WAD_Cardealer
-
-Wad project, car dealership
+Car dealer web application

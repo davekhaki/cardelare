@@ -1,0 +1,14 @@
+.nav_ul_items{
+      list-style-type: none;
+      display: grid;
+      grid-template-columns: 1fr 10fr 1fr 1fr;
+      padding-inline-start: 0px;
+      align-items: center;
+      justify-items: center;
+}
+
+nav img{
+      height: 50px;
+      width: 50px;
+}
+

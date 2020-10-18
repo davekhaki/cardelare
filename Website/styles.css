@@ -7,12 +7,23 @@ html{
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
+      height: 100%;
+}
+
+body{
+      
+      display: flex;
+      flex-direction: column;
+      margin: 0px;
       min-height: 100%;
 }
 
 nav{
       border-bottom: 2px solid rgb(43, 40, 40); /*option: rgb(155, 44, 30)*/
       text-shadow: 1px 1px rgb(248, 248, 248);
+      margin-left: 8px;
+      margin-right: 8px;
+      
 }
 
       .nav_ul_items{
@@ -24,12 +35,54 @@ nav{
             align-items: center;
             justify-items: center;
             font-weight: bold;
-            font-size: 25px;
+            font-size: 20px;
       }
 
       .logo{
             justify-self: start;
             padding-left: 15px;
+      }
+
+footer{
+      box-sizing: border-box;
+      width: 100%;
+      height: 40px;
+      display: flex;
+      margin-top: auto;
+      justify-content: center;
+      background: rgba(64, 63, 62, 0.699);
+      color: rgba(248, 248, 248, 0.775);
+      align-items: center;
+      align-content: center;
+      column-gap: 15%;
+      
+      
+}
+
+      footer img{
+            height: 30px;
+            width: auto;
+      }
+
+      .follow_us{
+            width: 13%;
+            min-width: 170px;
+            display: flex;
+            justify-content: space-between;
+      }
+
+      .contact_us{
+            min-width: 140px;
+            width: 11%;
+            display: flex;
+            justify-content: space-between;
+      }
+
+      
+      @media screen and (max-width: 560px){
+            footer{
+                 
+            }
       }
 
 .search_box{
@@ -72,3 +125,5 @@ nav{
             grid-column-end: 3;
             justify-self: center;
       }
+
+

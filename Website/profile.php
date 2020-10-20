@@ -21,8 +21,7 @@
     </div>
 
     <div id="rentHistory" class="tabcontent">
-        <h3>Paris</h3>
-        <p>Paris is the capital of France.</p>
+        <?php include "profileTabs/rentalHistory.php" ?>
     </div>
 
     <div id="sellHistory" class="tabcontent">

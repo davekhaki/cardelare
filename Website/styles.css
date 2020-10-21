@@ -147,3 +147,11 @@ footer img {
       grid-column-end: 3;
       justify-self: center;
 }
+
+.profile_tab_content div{
+      padding: 5px;
+      display: inline-block;
+      flex-direction: column;
+      width: 300px;
+      border:  2px solid red;
+}

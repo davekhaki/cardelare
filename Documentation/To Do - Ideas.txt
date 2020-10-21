@@ -1,0 +1,18 @@
+To Do:
+-
+
+
+Functions:
+-When selling a car to Cardelare, the customer sends an initial offer. Admin 
+accounts will recieve all offers. Admins could have specialities where they 
+are proffesionals in a certain car type(eg: sports cars). Where they only get
+sports car offers and can send counter offers. After an admin approves a deal
+the car will have been sold and the customer might get sent an email that 
+Cardelare will come to their address to pick up the car in 2-3 business days.
+
+
+
+Ideas:
+-Make "whats popular" button on home page where it shows the most rented
+car types or individual car.(For customers that dont know what to look for) or 
+a star system, out of 5.

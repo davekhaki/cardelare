@@ -3,11 +3,11 @@
 <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="styles.css">
+      <link rel="stylesheet" href="../styles.css">
       <title>Document</title>
 </head>
 <body class='homebody'>
-      <?php include "nav.html"?>
+      <?php include "shared/nav.html"?>
 
       <div class="search_box_title">Search for Rentals</div>
       <div class="search_box">
@@ -35,7 +35,7 @@
             </div>
       </div>
 
-      <?php include "footer.html"?>
+      <?php include "shared/footer.html"?>
 
 </body>
 </html>

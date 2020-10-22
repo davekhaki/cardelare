@@ -1,4 +1,4 @@
-.homehtml {
+.home_html {
       background-image: url(Images/Background.jpg);
       background-repeat: no-repeat;
       background-position: center;
@@ -69,10 +69,6 @@ footer img {
       width: 11%;
       display: flex;
       justify-content: space-between;
-}
-
-@media screen and (max-width: 560px) {
-    
 }
 
 .search_box {
@@ -150,4 +146,12 @@ footer img {
       grid-column-start: 1;
       grid-column-end: 3;
       justify-self: center;
+}
+
+.profile_tab_content div{
+      padding: 5px;
+      display: inline-block;
+      flex-direction: column;
+      width: 300px;
+      border:  2px solid red;
 }

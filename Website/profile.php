@@ -10,16 +10,21 @@
 <body>
     <?php include "nav.html" ?>
 
-    <form action="GetProfile.php" method="POST">
-        <label for="moment">Enter ID: </label>
-        <input id="truly" name="yeah" type="text" />
-        <br /><br />
-        <label for="name">Your name: </label>
-        <input id="name" name="name" type="readonly" />
-        <br /><br />
-        <button type="submit">Submit</button>
-    </form>
+    <div class="profile_tab_content">
+        <div class=profile-details>
+            <p>First Name:</p>
+            <p>Last Name: </p>
+            <p>Email:</p>
+            <p>Date of Birth:</p>    
+            <p>Phone Number:</p>
+            <p>Address:</p>
+            <input type="button" value="Edit Profile">
+        </div>
+        <div>
+            <?php include "rentHistory.php" ?>
+        </div>
 
+    </div>
 
 </body>
 

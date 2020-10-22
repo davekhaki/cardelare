@@ -9,7 +9,7 @@
 
 <body class="login-body">
 
-<?php include "nav.html" ?>
+<?php include "nav.html"?>
 
 <div class=login-container>
         <h1>Login</h1>

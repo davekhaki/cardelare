@@ -6,7 +6,7 @@
       height: 100%;
 }
 
-body {
+body{
       display: flex;
       flex-direction: column;
       margin: 0px;
@@ -15,7 +15,6 @@ body {
 
 nav {
       border-bottom: 2px solid rgb(43, 40, 40);
-      /*option: rgb(155, 44, 30)*/
       text-shadow: 1px 1px rgb(248, 248, 248);
       margin-left: 8px;
       margin-right: 8px;
@@ -71,21 +70,6 @@ footer img {
       justify-content: space-between;
 }
 
-.search_box {
-      display: grid;
-      width: min-content;
-      height: auto;
-      background-color: rgba(59, 58, 53, 0.699);
-      /*option: rgba(155, 45, 30, 0.534)*/
-      margin-left: auto;
-      margin-right: auto;
-      grid-template-columns: 1fr 1fr;
-      row-gap: 5px;
-      column-gap: 25px;
-      padding: 10px;
-      color: rgb(223, 223, 223);
-}
-
 /* Login page styles */
 
 .login-container {
@@ -122,6 +106,20 @@ footer img {
 
 /*---------------------*/
 
+.search_box {
+      display: grid;
+      width: min-content;
+      height: auto;
+      background-color: rgba(59, 58, 53, 0.699);
+      margin-left: auto;
+      margin-right: auto;
+      grid-template-columns: 1fr 1fr;
+      row-gap: 5px;
+      column-gap: 25px;
+      padding: 10px;
+      color: rgb(223, 223, 223);
+}
+
 .search_box_title {
       margin-top: 8%;
       text-align: center;
@@ -148,10 +146,62 @@ footer img {
       justify-self: center;
 }
 
-.profile_tab_content div{
-      padding: 5px;
-      display: inline-block;
-      flex-direction: column;
-      width: 300px;
-      border:  2px solid red;
+.profile_tab_content{
+      margin-top: 2px;
+      display: grid;
+      gap: 10px;  
+      grid-template-columns: 1fr 1fr 1fr;
+}
+
+.profile_tab_content > div{
+      border: 2px solid black;
+}
+
+
+
+.profile_details{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      justify-items: center;
+      grid-template-rows: repeat(3, 1fr);
+}
+
+.profile_details div{
+      height: min-content;
+}
+
+.profile_edit{      
+      grid-column-start: 2;
+      grid-column-end: 3;
+      align-self: center;
+}
+
+.profile_rent_history{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-column-start: 2;
+      grid-column-end: 4;
+      height: 100%;
+      overflow-y: auto;
+}
+
+.profile_rent_history > div{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      height: min-content;
+      border: 2px solid green;
+}
+
+.profile_rent_history_divs{
+      padding-top: 5%;
+      justify-items: center;
+}
+
+
+.profile_rent_history img{
+      justify-self: center;
+      grid-row-start: 1;
+      grid-row-end: 3;
 }

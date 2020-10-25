@@ -2,20 +2,14 @@ html{
       height: 100%;
 }
 
-.home_html {
-      background-image: url(Images/Background.jpg);
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
-      height: 100%;
-}
-
 body{
       display: flex;
       flex-direction: column;
       margin: 0px;
       min-height: 100%;
 }
+
+/* Nav Bar */
 
 nav {
       border-bottom: 2px solid rgb(43, 40, 40);
@@ -36,10 +30,14 @@ nav {
       font-size: 20px;
 }
 
+/* --Nav Bar End-- */
+
 .logo {
       justify-self: start;
       padding-left: 15px;
 }
+
+/* Footer */
 
 footer {
       height: 40px;
@@ -75,41 +73,16 @@ footer img {
       justify-content: space-between;
 }
 
-/* Login page styles */
+/* --Footer End-- */
 
-.login-container {
-      display: block;
-      text-align: center;
-      border-style: groove;
-      margin-left: 20%;
-      margin-right: 20%;
-      padding-bottom: 50px;
+/* Home Page */
+.home_html {
+      background-image: url(Images/Background.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      height: 100%;
 }
-
-.login-btn {
-      padding: 14px 40px;
-      height: 50px;
-      width: 15%;
-}
-
-.form-group {
-      margin: 1%;
-      width: 50%;
-      display: inline-block;
-}
-
-.form-group input {
-      width: 50%;
-      height: 35px;
-      border: 1px solid #999999;
-      font-size: 20px;
-}
-
-.form-group a {
-      padding-bottom: 20px;
-}
-
-/*---------------------*/
 
 .search_box {
       display: grid;
@@ -151,6 +124,48 @@ footer img {
       justify-self: center;
 }
 
+/* --Home page end-- */
+
+/* Login page */
+
+.login-container {
+      display: block;
+      text-align: center;
+      border-style: groove;
+      margin-left: 20%;
+      margin-right: 20%;
+      padding-bottom: 50px;
+}
+
+.login-btn {
+      padding: 14px 40px;
+      height: 50px;
+      width: 15%;
+}
+
+.form-group {
+      margin: 1%;
+      width: 50%;
+      display: inline-block;
+}
+
+.form-group input {
+      width: 50%;
+      height: 35px;
+      border: 1px solid #999999;
+      font-size: 20px;
+}
+
+.form-group a {
+      padding-bottom: 20px;
+}
+
+/* --Log In Page End-- */
+
+
+
+/* Profile */
+
 .profile_tab_content{
       margin-top: auto;
       margin-left: 5px;
@@ -160,33 +175,30 @@ footer img {
       grid-template-columns: 1fr 1fr 1fr;
 }
 
-.profile_titles{
-      font-size: 20px;
-      display: grid;
-      grid-template-columns: 1fr 2fr;
-      justify-items: center;
-      margin-top: auto;
-      
+.profile_details_title{
+      grid-column-start: 1;
+      grid-column-end: 4;
+      align-self: flex-end;
 }
 
 .profile_details{
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       justify-items: center;
-      grid-template-rows: repeat(4, 1fr);
+      grid-template-rows: repeat(5, 1fr);
       border: 2px solid black;
 }
 
 .profile_details div{
       height: min-content;
-      
+      align-self: flex-end;
 }
 
 .profile_details p{
       text-align: center;
 }
 
-.profile_edit{      
+.profile_edit_button{   
       height: 30px;
       grid-column-start: 2;
       grid-column-end: 3;
@@ -199,6 +211,7 @@ footer img {
       grid-template-rows: 1fr 1fr;
       grid-column-start: 2;
       grid-column-end: 4;
+      gap: 2px;
       height: 100%;
       overflow-y: auto;
       
@@ -209,7 +222,7 @@ footer img {
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr 1fr 1fr;
       height: min-content;
-      border: 2px solid green;
+      border: 2px solid black;
 }
 
 .profile_rent_history_divs{
@@ -223,3 +236,5 @@ footer img {
       grid-row-start: 1;
       grid-row-end: 3;
 }
+
+/* --Profile End-- */

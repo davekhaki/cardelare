@@ -126,8 +126,34 @@ footer img {
 
 /* --Home page end-- */
 
-/* Login page */
+/* Register page styles ----------------------------------------*/
+.register_container{
+      padding: 16px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      margin: auto;
+      width: 50%;
+    
+}
+.register_terms{
+      margin: auto;
+      width: 50%;  
+}
 
+.register_input{
+      width: 100%;
+      padding: 15px;
+      margin: 5px;
+  
+}
+.register_button{
+      margin: auto;
+      width: 50%; 
+}
+/*--------------------------------------------------------------*/
+
+/* Login page styles -------------------------------------------*/
 .login-container {
       display: block;
       text-align: center;
@@ -160,7 +186,46 @@ footer img {
       padding-bottom: 20px;
 }
 
-/* --Log In Page End-- */
+/*--------------------------------------------------------------*/
+
+/* Sell page styles --------------------------------------------*/
+.sell_form{
+      margin: 10px;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+}
+
+.car_image{
+      display: flex;
+      flex-direction: column;
+}
+
+.moment{
+      width: 100%;
+      height: 50vh;
+      margin-bottom: 1%;
+}
+
+.car_details{
+      margin:40px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+
+}
+
+.car_details_submit{
+      grid-column-start: 3;
+      grid-column-end: 5;
+}
+
+.car_details_input{
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+}
+
+/*--------------------------------------------------------------*/
 
 
 

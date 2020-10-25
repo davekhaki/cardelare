@@ -8,10 +8,17 @@
 </head>
 
 <body class="profile_body">
-    <?php include "shared/nav.html" ?>
+        <?php 
+            $currentPage = "Profile";
+            include "shared/nav.php"
+        ?>
+    <div class= "profile_titles">
+        <div>Edit profile Details</div>
+        <div>Last 4 Rentals</div>
+    </div>
 
     <div class="profile_tab_content">
-        <div class=profile_details>
+        <div class=profile_details title="Hello">
             <div><p>First Name:</p><input type="text" value="Lebron"></div>
             <div><p>Last Name:</p><input type="text" value="James"></div>
             <div><p>Email:</p><input type="text" value="lebron.james@email.com"></div>
@@ -40,6 +47,8 @@
 
 
     </div>
+
+    <?php include "shared/footer.html" ?>
 
 </body>
 

@@ -7,7 +7,10 @@
       <title>Document</title>
 </head>
 <body class='homebody'>
-      <?php include "shared/nav.html"?>
+      <?php 
+            $currentPage = "CarDelare, Rent a car or Sell your car";
+            include "shared/nav.php"      
+      ?>
 
       <div class="search_box_title">Search for Rentals</div>
       <div class="search_box">

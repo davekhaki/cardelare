@@ -6,10 +6,12 @@
       <link rel="stylesheet" href='../styles.css'>
 </head>
 
-
 <body class="login-body">
 
-<?php include "shared/nav.html"?>
+<?php
+    $currentPage = "You are not logged in";
+    include "shared/nav.php"
+?>
 
 <div class=login-container>
         <h1>Login</h1>
@@ -26,7 +28,7 @@
                 </form>
 
             <p>Don't have an account yet?</p>
-            <a href = "register.php"> Sign up </a>
+            <a href = "register.php"> Create one now</a>
     </div>
 
 </body>

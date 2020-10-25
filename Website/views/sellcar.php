@@ -8,7 +8,10 @@
 </head>
 
 <body>
-    <?php include "shared/nav.html" ?>
+    <?php 
+        $currentPage = "Sell your car";
+        include "shared/nav.php"; 
+    ?>
 
     <div class="sell_form">
         <div class="car_image">

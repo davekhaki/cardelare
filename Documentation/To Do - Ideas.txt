@@ -1,9 +1,10 @@
 To Do:
 -Log-in functionality
+-Profile detail edit
+-Responsive pages
 -Admin interface/account
 -Make proper database entries
 -Search result page w/ sidebar
--Profile detail edit
 -Save rented cars connected to users
 -Create social accounts for carDelare
 -

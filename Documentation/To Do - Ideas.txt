@@ -1,11 +1,11 @@
 To Do:
--Log-in functionality (admin included) *
--Responsive pages *
--Make proper database entries *
--Search result page w/ sidebar *
--Create social accounts for carDelare *
+-Responsive pages ***
+-Make proper database entries ***
+-Create social accounts for carDelare 
 -Add Title on top of inputs in sell car page.
 -Add description input in sell car page.
+-Move javascript to a seperate file.
+-Popup with javascript for wrong credentials.
 
 
 -Profile detail edit 

@@ -1,4 +1,5 @@
 <?php
+      session_start();
 
       require "../DAL/userDal.php";
 
@@ -13,13 +14,20 @@
             $user = $moment->getUserByUsername($username, $passwordAttempt);      
 
             if ($user === false) {
-                  print("yeah not facts");
-                  } else {
+                  header('Location: ../views/login.php');
+            } 
+            else {
                   if($user["role"] == "admin"){
+                        $_SESSION['username'] = $username;
+                        $_SESSION['id'] = $user["id"];
                         header('Location: ../views/admin.php');
                   }
                   else{
-                        print("yeah, yeah");
+                        $_SESSION['username'] = $username;
+                        $_SESSION['id'] = $user["id"];
+                         header('Location: ../views/profile.php');
+                        
+
                   }
             }
       }

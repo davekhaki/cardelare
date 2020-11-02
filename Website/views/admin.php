@@ -1,1 +1,4 @@
-this really is admin
+<?php
+      session_start();
+
+      echo $_SESSION['username'];

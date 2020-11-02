@@ -1,17 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php 
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href='../styles.css'>
-</head>
+    include "shared/header.php";
+
+    if(!isset($_SESSION['username'])) {
+        header('Location: login.php');
+    }
+
+
+?>
 
 <body class="profile_body">
-        <?php 
-            $currentPage = "Profile - Rent History";
-            include "shared/nav.php"
-        ?>
+
+    <nav>
+        <ul class="nav_ul_items">
+                <li class="logo"><a href="home.php"><img src="../Images/navBar/Logo.png" alt=""></a></li>
+                <li>Profile- Rent History</li> 
+                <li><a href="sellcar.php"><img src="../Images/navBar/Sell Car.png" alt=""></a></li>
+                <li><a href="../Logic/logout.php"><img src="../Images/navBar/Exit.png" alt=""></a></li>
+        </ul>
+    </nav>
 
     <div class="profile_tab_content">
 

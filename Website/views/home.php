@@ -1,3 +1,5 @@
+<?php session_start() ?>
+
 <!DOCTYPE html>
 <html lang="en" class="home_html">
 <head>
@@ -6,6 +8,7 @@
       <link rel="stylesheet" href="../styles.css">
       <title>Document</title>
 </head>
+
 <body class='homebody'>
       <?php 
             $currentPage = "CarDelare, Rent a car or Sell your car";

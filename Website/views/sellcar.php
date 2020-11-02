@@ -1,11 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php 
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href='../styles.css'>
-</head>
+    include "shared/header.php";
+    
+    if(!isset($_SESSION['username'])) {
+        header('Location: login.php');
+    }
+?>
 
 <body>
     <?php 

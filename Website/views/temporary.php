@@ -1,6 +1,3 @@
 <?php 
-
-require "../DAL/userDal.php";
-
-
+    require "../DAL/userDal.php";
 ?>

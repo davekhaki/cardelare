@@ -34,7 +34,7 @@
                   <input type="number" name="car_price_maximum" id="price_maximum">
             </div>
             <div class="sb_button_div">
-                  <button type="submit">Search</button>
+                  <a href="searchResult.php"><button type="submit">Search</button></a>
             </div>
       </div>
 

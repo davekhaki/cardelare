@@ -14,8 +14,8 @@
 ?>
 
 <div class=login-container>
-        <h1>Login</h1>
-                <form action="temporary.php" method="post">
+        <h1>Login</h1>  
+                <form action="../Logic/loginLogic.php" method="post">
                     <div class="form-group">
                         <input type="text" name="username" placeholder="username">
                     </div>

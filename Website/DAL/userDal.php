@@ -34,19 +34,8 @@ class userDal
 
         $stmt->execute();
 
-        $user = $stmt->fetch(PDO::FETCH_ASSOC);
+        $user = $stmt->fetch(PDO::FETCH_ASSOC); 
 
-        if ($user === false) {
-            print("yeah not facts");
-        } else {
-            if($user["role"] == "admin"){
-                header('Location: admin.php');
-            }
-            else{
-                print("yeah, yeah");
-            }
-            
-           
-        }
+        return $user;
     }
 }

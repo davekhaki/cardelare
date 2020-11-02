@@ -231,6 +231,7 @@ footer img {
 
 /* Profile */
 
+
 .profile_tab_content{
       margin-top: auto;
       margin-left: 5px;
@@ -302,6 +303,9 @@ footer img {
       grid-row-end: 3;
 }
 
+
+
+
 /* --Profile End-- */
 
 /* Result Page */
@@ -314,10 +318,6 @@ footer img {
       margin-right: 5px;
       column-gap: 5px;
       height: 80vh;
-}
-
-.result_page > div{
-      
 }
 
 .result_page_results > div{

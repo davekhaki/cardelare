@@ -15,7 +15,7 @@
 
 <div class=login-container>
         <h1>Login</h1>
-                <form action="login/test.php" method="post">
+                <form action="temporary.php" method="post">
                     <div class="form-group">
                         <input type="text" name="username" placeholder="username">
                     </div>

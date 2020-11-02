@@ -4,6 +4,9 @@ To Do:
 -Make proper database entries *
 -Search result page w/ sidebar *
 -Create social accounts for carDelare *
+-Add Title on top of inputs in sell car page.
+-Add description input in sell car page.
+
 
 -Profile detail edit 
 -Admin interface/account

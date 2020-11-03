@@ -38,4 +38,23 @@ class userDal
 
         return $user;
     }
+
+    public function addNewUser($username, $password){
+        //start and finish a transaction to add a new user into the user table and add their login details to the login table
+        $sql = "BEGIN; 
+                INSERT INTO user (id, firstname, lastname, email, phone, dob, address) 
+                    VALUES (NULL, '','','','','','');
+                INSERT INTO login (id, username, password, role)
+                    VALUES(LAST_INSERT_ID(), :username, :password, 'user');
+                COMMIT;";
+        $stmt = $this->con->connect()->prepare($sql);
+
+        $stmt->bindValue(':username', $username);
+        $stmt->bindValue(':password', $password);
+
+        $stmt->execute();
+
+        return $stmt;
+
+    }
 }

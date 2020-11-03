@@ -2,10 +2,10 @@
 include('dbConfig.php');
 
 class dbConnection{
-    private $host = DBHOST;
-    private $user = DBUSER;
-    private $pwd = DBPWD;
-    private $name = DBNAME;
+    private string $host = DBHOST;
+    private string $user = DBUSER;
+    private string $pwd = DBPWD;
+    private string $name = DBNAME;
 
     public function connect() {
         $dsn = 'mysql:host=' . $this->host .';dbname=' . $this->name;

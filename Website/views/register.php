@@ -7,7 +7,7 @@
     include "shared/nav.php";
     ?>
 
-    <form action="idk">
+    <form action="idk" class="register_form">
         <div class="register_container">
             <h1>Register</h1>
 

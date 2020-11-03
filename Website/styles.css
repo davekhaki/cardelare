@@ -127,40 +127,52 @@ footer img {
 /* --Home page end-- */
 
 /* Register page styles */
+
+.register_form{
+      margin-top: 5%;
+}
 .register_container{
+      border: 2px solid lightslategrey;
       padding: 16px;
       height: 100%;
       display: flex;
       flex-direction: column;
       margin: auto;
       width: 50%;
-    
 }
+
+.register_container h1{
+      text-align: center;
+}
+
 .register_terms{
-      margin: auto;
-      width: 50%;  
+      margin-top: 3%;
+      text-align: center;
+      width: auto;
 }
 
 .register_input{
-      width: 100%;
+      width: auto;
       padding: 15px;
       margin: 5px;
   
 }
 .register_button{
-      margin: auto;
-      width: 50%; 
+      margin-top: 3%;
+      text-align: center;
 }
 /* -- Register Styles End -- */
 
 /* Login styles */
 .login-container {
+      margin-top: 5%;
       display: block;
-      text-align: center;
-      border-style: groove;
       margin-left: 20%;
       margin-right: 20%;
-      padding-bottom: 50px;
+      text-align: center;
+      border-style: groove;
+      padding-bottom: 5%;
+
 }
 
 .login-btn {
@@ -230,7 +242,6 @@ footer img {
 
 
 /* Profile */
-
 
 .profile_tab_content{
       margin-top: auto;
@@ -303,7 +314,48 @@ footer img {
       grid-row-end: 3;
 }
 
+@media only screen and (max-width: 1050px){
 
+      .nav_ul_items{
+            grid-template-columns: 2fr 10fr 1fr 1fr;
+      }
+
+
+
+      .profile_tab_content {
+            display: flex;
+            flex-direction: column;
+      }
+
+      .profile_details {
+            display: grid;
+            column-gap: 2px;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: repeat(5, 1fr);
+      }
+
+      .profile_details div{
+            align-self: center;
+      }
+
+      .profile_details_title {
+            align-self: center;
+            grid-column-start: unset;
+            grid-column-end: unset;
+      }
+
+      .profile_edit_button{
+            margin-top: 3%;
+            margin-bottom: 3%;
+            grid-column-start: 1;
+            grid-column-end: 3;
+      }
+
+      .profile_rent_history{
+            display: flex;
+            flex-direction: column;
+      }
+}
 
 
 /* --Profile End-- */
@@ -369,7 +421,5 @@ footer img {
       justify-self: center;
       align-self: center;
 }
-
-
 
 /* -- Result Page End -- */

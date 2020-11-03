@@ -20,14 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1aae82f2-4b81-4536-8f08-4b7eacf01b6d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/DAL/dbConnection.php" beforeDir="false" afterPath="$PROJECT_DIR$/DAL/dbConnection.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logic/loginLogic.php" beforeDir="false" afterPath="$PROJECT_DIR$/Logic/loginLogic.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/home.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/profile.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/register.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/shared/nav.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/shared/nav.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +62,7 @@
       <workItem from="1604410187564" duration="265000" />
       <workItem from="1604410532046" duration="93000" />
       <workItem from="1604410790071" duration="1480000" />
+      <workItem from="1604412571334" duration="903000" />
     </task>
     <servers />
   </component>

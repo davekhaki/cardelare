@@ -222,7 +222,7 @@ footer img {
       flex-direction: column;
 }
 
-.moment{
+.uploaded_image{
       width: 100%;
       height: 50vh;
       margin-bottom: 1%;
@@ -233,12 +233,12 @@ footer img {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       grid-template-rows: repeat(3, 1fr);
-
 }
 
 .car_details_submit{
-      grid-column-start: 3;
-      grid-column-end: 5;
+      grid-column-start: 2;
+      grid-column-end: 4;
+      justify-self: center;
 }
 
 .car_details_input{
@@ -247,11 +247,47 @@ footer img {
       flex-direction: column;
 }
 
+@media only screen and (max-width: 1050px){
+
+      /* navbar responsive */
+      .nav_ul_items{
+            grid-template-columns: 2fr 10fr 1fr 1fr;
+      }
+
+      .sell_form{
+            display: flex;
+            flex-direction: column;
+      }
+
+      .car_details{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+            margin: 0px;
+            
+      }
+
+      .car_details div{
+            margin: 0px;
+            padding-top: 5%;
+            padding-bottom: 5%;
+      }
+
+      .car_details_submit{
+            grid-column-start: 1;
+            grid-column-end: 3;
+            justify-self: center;
+      }
+
+
+}
+
 /* -- Sell Page End -- */
 
 
 
 /* Profile */
+
 .profile_tab_content{
       margin-top: auto;
       margin-left: 5px;
@@ -323,9 +359,9 @@ footer img {
       grid-row-end: 3;
 }
 
-
 @media only screen and (max-width: 1050px){
 
+      /* navbar responsive */
       .nav_ul_items{
             grid-template-columns: 2fr 10fr 1fr 1fr;
       }

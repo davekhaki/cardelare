@@ -126,7 +126,7 @@ footer img {
 
 /* --Home page end-- */
 
-/* Register page styles ----------------------------------------*/
+/* Register page styles */
 .register_container{
       padding: 16px;
       height: 100%;
@@ -151,9 +151,9 @@ footer img {
       margin: auto;
       width: 50%; 
 }
-/*--------------------------------------------------------------*/
+/* -- Register Styles End -- */
 
-/* Login page styles -------------------------------------------*/
+/* Login styles */
 .login-container {
       display: block;
       text-align: center;
@@ -186,9 +186,9 @@ footer img {
       padding-bottom: 20px;
 }
 
-/*--------------------------------------------------------------*/
+/* -- Log in Styles End --*/
 
-/* Sell page styles --------------------------------------------*/
+/* Sell Page Styles */
 .sell_form{
       margin: 10px;
       display: grid;
@@ -225,19 +225,53 @@ footer img {
       flex-direction: column;
 }
 
-/*--------------------------------------------------------------*/
+/* -- Sell Page End -- */
 
 
 
 /* Profile */
+.profile_body{
+      width:100%;
+}
 
-.profile_tab_content{
-      margin-top: auto;
-      margin-left: 5px;
-      margin-right: 5px;
-      display: grid;
-      gap: 10px;  
-      grid-template-columns: 1fr 1fr 1fr;
+@media (min-width: 1050px){
+      .profile_tab_content{
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr;
+      } 
+      
+      .profile_rent_history{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-column-start: 2;
+            grid-column-end: 4;
+            gap: 2px;
+            height: 100%;
+            overflow-y: auto;
+            
+      }
+}
+
+@media (max-width: 1050px){
+      .profile_tab_content{
+            width: 100%;
+            background-color: purple;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr;
+      }
+      .profile_rent_history{
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+            gap: 2px;
+            height: 100%;
+            overflow-y: auto;
+            
+      }
 }
 
 .profile_details_title{
@@ -270,18 +304,6 @@ footer img {
       align-self: center;
 }
 
-.profile_rent_history{
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
-      grid-column-start: 2;
-      grid-column-end: 4;
-      gap: 2px;
-      height: 100%;
-      overflow-y: auto;
-      
-}
-
 .profile_rent_history > div{
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -303,3 +325,69 @@ footer img {
 }
 
 /* --Profile End-- */
+
+/* Result Page */
+
+.result_page{
+      margin-top: auto;
+      display: grid;
+      grid-template-columns: 1fr 6fr;
+      margin-left: 5px;
+      margin-right: 5px;
+      column-gap: 5px;
+      height: 80vh;
+}
+
+.result_page_results > div{
+      border: 2px solid black;
+}
+
+.result_page_results{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 5px;
+      overflow-x: hidden; 
+      overflow-y: scroll;
+}
+
+.result_page_results div{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+}
+
+.result_page_results img {
+      grid-row-start: 1;
+      grid-row-end: 3;
+}
+
+.result_page_filters{
+      display: grid;
+      grid-template-rows: repeat(9, 1fr);
+      border: 2px solid black;
+}
+
+
+.result_page_filters p{
+      margin-bottom: 2px;
+}
+
+.result_page_filters div{
+      text-align: center;
+}
+
+.result_page_price_range{
+      width: 64px;
+}
+
+.result_page_submit_filter{
+      width: 50%;
+      height: 40%;      
+      justify-self: center;
+      align-self: center;
+}
+
+
+
+/* -- Result Page End -- */

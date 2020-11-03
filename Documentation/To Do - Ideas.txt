@@ -1,5 +1,16 @@
 To Do:
--
+-Responsive pages ***
+-Make proper database entries ***
+-Create social accounts for carDelare 
+-Add Title on top of inputs in sell car page.
+-Add description input in sell car page.
+-Move javascript to a seperate file.
+-Popup with javascript for wrong credentials.
+
+
+-Profile detail edit 
+-Admin interface/account
+-Save rented cars connected to users
 
 
 Functions:

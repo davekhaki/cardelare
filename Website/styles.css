@@ -200,7 +200,7 @@ footer img {
       flex-direction: column;
 }
 
-.moment{
+.uploaded_image{
       width: 100%;
       height: 50vh;
       margin-bottom: 1%;
@@ -211,12 +211,12 @@ footer img {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       grid-template-rows: repeat(3, 1fr);
-
 }
 
 .car_details_submit{
-      grid-column-start: 3;
-      grid-column-end: 5;
+      grid-column-start: 2;
+      grid-column-end: 4;
+      justify-self: center;
 }
 
 .car_details_input{
@@ -225,53 +225,54 @@ footer img {
       flex-direction: column;
 }
 
+@media only screen and (max-width: 1050px){
+
+      /* navbar responsive */
+      .nav_ul_items{
+            grid-template-columns: 2fr 10fr 1fr 1fr;
+      }
+
+      .sell_form{
+            display: flex;
+            flex-direction: column;
+      }
+
+      .car_details{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+            margin: 0px;
+            
+      }
+
+      .car_details div{
+            margin: 0px;
+            padding-top: 5%;
+            padding-bottom: 5%;
+      }
+
+      .car_details_submit{
+            grid-column-start: 1;
+            grid-column-end: 3;
+            justify-self: center;
+      }
+
+
+}
+
 /* -- Sell Page End -- */
 
 
 
 /* Profile */
-.profile_body{
-      width:100%;
-}
 
-@media (min-width: 1050px){
-      .profile_tab_content{
-            width: 100%;
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: 1fr 1fr;
-      } 
-      
-      .profile_rent_history{
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: 1fr 1fr;
-            grid-column-start: 2;
-            grid-column-end: 4;
-            gap: 2px;
-            height: 100%;
-            overflow-y: auto;
-            
-      }
-}
-
-@media (max-width: 1050px){
-      .profile_tab_content{
-            width: 100%;
-            background-color: purple;
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: 1fr 1fr;
-      }
-      .profile_rent_history{
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: 1fr 1fr 1fr 1fr;
-            gap: 2px;
-            height: 100%;
-            overflow-y: auto;
-            
-      }
+.profile_tab_content{
+      margin-top: auto;
+      margin-left: 5px;
+      margin-right: 5px;
+      display: grid;
+      gap: 10px;  
+      grid-template-columns: 1fr 1fr 1fr;
 }
 
 .profile_details_title{
@@ -304,6 +305,18 @@ footer img {
       align-self: center;
 }
 
+.profile_rent_history{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-column-start: 2;
+      grid-column-end: 4;
+      gap: 2px;
+      height: 100%;
+      overflow-y: auto;
+      
+}
+
 .profile_rent_history > div{
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -323,6 +336,51 @@ footer img {
       grid-row-start: 1;
       grid-row-end: 3;
 }
+
+@media only screen and (max-width: 1050px){
+
+      /* navbar responsive */
+      .nav_ul_items{
+            grid-template-columns: 2fr 10fr 1fr 1fr;
+      }
+
+
+
+      .profile_tab_content {
+            display: flex;
+            flex-direction: column;
+      }
+
+      .profile_details {
+            display: grid;
+            column-gap: 2px;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: repeat(5, 1fr);
+      }
+
+      .profile_details div{
+            align-self: center;
+      }
+
+      .profile_details_title {
+            align-self: center;
+            grid-column-start: unset;
+            grid-column-end: unset;
+      }
+
+      .profile_edit_button{
+            margin-top: 3%;
+            margin-bottom: 3%;
+            grid-column-start: 1;
+            grid-column-end: 3;
+      }
+
+      .profile_rent_history{
+            display: flex;
+            flex-direction: column;
+      }
+}
+
 
 /* --Profile End-- */
 

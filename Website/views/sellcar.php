@@ -46,6 +46,9 @@
             <div>
                 <input type="text" id="price" placeholder="Price">
             </div>
+            <div class="car_sell_description">
+                <textarea placeholder="Description" id="description" cols="30" rows="3"></textarea>
+            </div>
             <div class="car_details_submit">
                 <input class=offer_button type="button" value="Send Offer">
             </div>

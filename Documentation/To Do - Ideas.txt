@@ -7,7 +7,7 @@ To Do:
 -Move javascript to a seperate file.
 -Popup with javascript for wrong credentials.
 
-
+-Suggestion for citys that cars can be rented from and returned to
 -Profile detail edit 
 -Admin interface/account
 -Save rented cars connected to users

@@ -8,8 +8,8 @@ require "../DAL/userDal.php";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $username = $_POST['username'];
-    $password = $_POST['password'];
-    $passwordRepeat = $_POST['passwordRepeat'];
+    $password = $_POST['pass'];
+    $passwordRepeat = $_POST['pass_repeat'];
 
     if ($password !== $passwordRepeat) {
     //defaults back to the register page when the passwords dont match

@@ -20,14 +20,14 @@
                   if($user["role"] == "admin"){
                         $_SESSION['username'] = $username;
                         $_SESSION['id'] = $user["id"];
+                        $_SESSION['role'] = $user["role"];
                         header('Location: ../views/admin.php');
                   }
                   else{
                         $_SESSION['username'] = $username;
                         $_SESSION['id'] = $user["id"];
-                         header('Location: ../views/profile.php');
-                        
-
+                        $_SESSION['role'] = $user["role"];
+                        header('Location: ../views/profile.php');                      
                   }
             }
 

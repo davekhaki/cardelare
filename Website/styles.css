@@ -9,6 +9,10 @@ body{
       min-height: 100%;
 }
 
+a{
+      color: inherit;
+}
+
 /* Nav Bar */
 
 nav {
@@ -28,6 +32,19 @@ nav {
       justify-items: center;
       font-weight: bold;
       font-size: 20px;
+}
+
+@media only screen and (max-width: 1050px){
+      .nav_ul_items img{
+            height: 35px;
+      }
+
+      .nav_ul_items li{
+            padding-left: 10px;
+            padding-right: 10px;
+            text-align: center;
+            font-size: 15px;
+      }
 }
 
 /* --Nav Bar End-- */
@@ -138,8 +155,12 @@ footer img {
       flex-direction: column;
       align-self: center;
       margin-top: 7%;
-      width: 50%;
+      width: 60%;
       
+}
+
+.register_have_account{
+      margin: 4%;
 }
 
 .register_container h1{
@@ -153,8 +174,9 @@ footer img {
 }
 
 .register_input{
+      font-size: 20px;
       width: 50%;
-      height: 40px;
+      height: 30px;
       margin: 1%;
 
 }
@@ -170,24 +192,30 @@ footer img {
       width: min-content;
 }
 
+@media only screen and (max-width: 1050px){
+      .register_input{
+            width: 35vw;
+            font-size: 15px;
+            height: 20px;
+      }
+}
+
 
 /* -- Register Styles End -- */
 
 /* Login styles */
 .login-container {
       margin-top: 5%;
-      display: block;
-      margin-left: 20%;
-      margin-right: 20%;
       text-align: center;
-      border-style: groove;
+      border: 2px solid grey;
       padding-bottom: 5%;
-
+      width: 50%;
+      align-self: center;
 }
 
 .login-btn {
-      padding: 14px 40px;
-      height: 50px;
+      margin-top: 1%;
+      height: 30px;
       width: 15%;
 }
 
@@ -198,14 +226,37 @@ footer img {
 }
 
 .form-group input {
-      width: 50%;
-      height: 35px;
       border: 1px solid #999999;
+      padding: 1%;
       font-size: 20px;
 }
 
 .form-group a {
       padding-bottom: 20px;
+}
+
+@media only screen and (max-width: 1050px)
+{
+      .form-group{
+            margin-top: 3%;
+      }
+
+      .login-container{
+            margin-right: auto;
+            margin-left: auto;
+            width: 60%;
+      }
+
+      .form-group input{
+            width: 30vw;
+            font-size: 15px;
+      }
+
+      .login-btn{
+            margin-top: 3%;
+            height: 25px;
+            width: 25%;
+      }
 }
 
 /* -- Log in Styles End --*/
@@ -464,6 +515,31 @@ footer img {
       height: 40%;      
       justify-self: center;
       align-self: center;
+}
+
+@media only screen and (max-width: 1050px)
+{
+      .result_page{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+      }
+
+      .result_page_filters{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: repeat(5, 1fr);
+      }
+
+      .result_page_submit_filter{
+            grid-column-start: 1;
+            grid-column-end: 3;
+      }
+
+      .result_page_results{
+            display: flex;
+            flex-direction: column;
+      }
 }
 
 /* -- Result Page End -- */

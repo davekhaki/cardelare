@@ -11,10 +11,10 @@
         <h1>Login</h1>
         <form action="../Logic/loginLogic.php" method="post">
             <div class="form-group">
-                <input type="text" name="username" placeholder="username">
+                <input type="text" name="username" placeholder="Username">
             </div>
             <div class="form-group">
-                <input type="password" name="password" placeholder="password">
+                <input type="password" name="password" placeholder="Password">
             </div>
             <div>
                 <input type="submit" class="login-btn" value="Log In">

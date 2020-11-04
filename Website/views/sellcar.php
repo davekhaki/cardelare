@@ -44,7 +44,7 @@
                 <input type="text" id="city" placeholder="City">
             </div>
             <div>
-                <input type="text" id="price" placeholder="price">
+                <input type="text" id="price" placeholder="Price">
             </div>
             <div class="car_details_submit">
                 <input class=offer_button type="button" value="Send Offer">

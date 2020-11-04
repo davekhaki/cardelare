@@ -11,7 +11,7 @@
         <form action="../Logic/registerLogic.php" method="post" class="register_form">
             <h1>Register</h1>
             
-            <input type="text" class="register_input" placeholder="Email" name="email" required>
+            <input type="text" class="register_input" placeholder="Username" name="email" required>
 
             <input type="password" class="register_input" placeholder="Password" name="pass" required>
 
@@ -25,6 +25,8 @@
             <div class="register_button">
                 <button type="submit">Register</button>
             </div>
+
+            <div class="register_have_account"><a href="login.php">Already have an account?</a></div>
             </form>
         </div>
     

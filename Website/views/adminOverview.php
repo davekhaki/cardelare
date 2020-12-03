@@ -11,7 +11,7 @@
 <body>
     
     <?php 
-            $currentPage = "Pending Offers";
+            $currentPage = "Overview";
             include "shared/adminNav.php"; 
     ?>
 

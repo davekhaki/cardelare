@@ -21,7 +21,7 @@
                         $_SESSION['username'] = $username;
                         $_SESSION['id'] = $user["id"];
                         $_SESSION['role'] = $user["role"];
-                        header('Location: ../views/admin.php');
+                        header('Location: ../views/adminOverview.php');
                   }
                   else{
                         $_SESSION['username'] = $username;

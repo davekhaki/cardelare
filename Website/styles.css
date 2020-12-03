@@ -47,12 +47,46 @@ nav {
       }
 }
 
+.logo {
+      justify-self: start;
+      padding-left: 15px;
+}
+
 /* --Nav Bar End-- */
+
+/* Admin Nav Start  */
+
+.adminNav_ul_items {
+      list-style-type: none;
+      display: grid;
+      grid-template-columns: 2fr 10fr 1fr 1fr 1fr;
+      padding-inline-start: 0px;
+      margin-block-end: 1%;
+      align-items: center;
+      justify-items: center;
+      font-weight: bold;
+      font-size: 20px;
+}
+
+@media only screen and (max-width: 1050px){
+      .adminNav_ul_items img{
+            height: 35px;
+      }
+
+      .adminNav_ul_items li{
+            padding-left: 10px;
+            padding-right: 10px;
+            text-align: center;
+            font-size: 15px;
+      }
+}
 
 .logo {
       justify-self: start;
       padding-left: 15px;
 }
+
+/* -- Admin Nav End -- */
 
 /* Footer */
 
@@ -569,3 +603,22 @@ footer img {
 }
 
 /* -- Result Page End -- */
+
+/* Admin Overview Page Start */
+
+.grid-container {
+      display: grid;
+      grid-template-columns: auto auto;
+      background-color: lightblue;
+      padding: 10px;
+      margin: 5%;
+      
+    }
+    .grid-item {
+      background-color: rgba(255, 255, 255, 0.8);
+      border: 1px solid rgba(0, 0, 0, 0.8);
+      padding: 20px;
+      font-size: 30px;
+      text-align: center;
+}
+/* -- Admin Overview Page End -- */

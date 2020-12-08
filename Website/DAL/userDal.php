@@ -57,4 +57,15 @@ class userDal
         return $stmt;
 
     }
+
+    public function GetAmountOfUsers()
+    {
+        $sql = "SELECT COUNT(id) AS amt FROM user";
+
+        $stmt = $this->con->connect()->query($sql);
+
+        $result = $stmt->fetchAll();
+      
+        return reset($result);
+    }
 }

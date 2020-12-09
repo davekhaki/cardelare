@@ -68,4 +68,15 @@ class userDal
       
         return reset($result);
     }
+
+    public function GetProfileDetails($username){
+        $sql = "SELECT * FROM user u INNER JOIN login l on u.id = l.id WHERE username = :username";
+
+        $stmt = $this->con->connect()->prepare($sql);
+        $stmt->bindValue(':username', $username);
+        $stmt->execute();
+        $details = $stmt->fetch(); 
+
+        return $details;
+    }
 }

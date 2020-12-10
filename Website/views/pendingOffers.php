@@ -16,7 +16,12 @@
 
     <div class="pending_offer_content">
         <div class="pending_cars_list">
-
+            <form action="" class="pending_offers_listbox">
+                <select name="" id="" size="10">
+                    <option value="">user: averageuser@gmail.com, brand: bmw, model: m3</option>
+                    <option value="">user: notaverageuser@gmail.com, brand: honda, model: civic</option>
+                </select>
+            </form>
         </div>
         <div class="selected_car_info">
             <div class="pending_car_image">

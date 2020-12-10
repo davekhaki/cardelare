@@ -63,8 +63,6 @@ $arr = $profileManager->GetRentals();
                 </div>
             <?php endforeach; ?>
         </div>
-        <p>rentals array:</p><?php var_dump($arr); ?>
-
     </div>
     <?php include "shared/footer.html" ?>
 </body>

@@ -2,8 +2,8 @@
 include "shared/header.php";
 require "../Logic/carOverview.php";
 
-$momentum = new CarOverview();
-$arr = $momentum->GetCars();
+$carManager = new CarOverview();
+$arr = $carManager->GetCars();
 
 if (isset($_SESSION['role']) && $_SESSION['role'] != "admin") {
     header('Location: ../Logic/logout.php');

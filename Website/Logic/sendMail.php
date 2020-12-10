@@ -2,6 +2,8 @@
 
 include_once('../PHPMailer/PHPMailerAutoload.php');
 
+$price = $_POST['price'];
+
 $mail = new PHPMailer();
 
 $mail->isSMTP();
@@ -13,7 +15,7 @@ $mail->isHTML();
 $mail->Username = 'realcardelare@gmail.com';
 $mail->Password = 'Phpsucks';
 $mail->Subject = 'Car Offer';
-$mail->Body = "Thank you for your offer, our experts' counter offer is 3500$ .";
+$mail->Body = "Thank you for your offer, our experts' counter offer is $price .";
 $mail->addAddress('mbgroup.bruh@gmail.com');
 
 $mail->send();

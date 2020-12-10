@@ -677,3 +677,54 @@ footer img {
       row-gap: 30%;
 }
 /* Add Car Page End */
+/* -- Admin Overview Page End -- */
+
+/* Pending Offer Page Start */
+
+.pending_offer_content{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      padding-top: 2%;
+}
+
+.pending_offer_content > div{
+      background-color: seagreen;
+      width: 95%;
+      height: 80vh;
+      justify-self: center;
+}
+
+.selected_car_info{
+      display: flex;
+      flex-direction: column;
+}
+
+.pending_car_image{
+      align-self: center;
+      margin-top: 7%;
+}
+
+.pending_car_detail{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      text-align: center;
+}
+
+.offer_response_form{
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      margin-top: 35%;
+}
+
+.offer_response_form div{
+      margin-top: 5%;
+}
+
+.pending_offers_listbox{
+      text-align: center;
+      margin-top: 40%;
+      
+}
+
+/* -- Pending Offer End -- */

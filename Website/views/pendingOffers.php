@@ -5,21 +5,28 @@
     {
         header('Location: ../Logic/logout.php');
     }
+
+    require "../Logic/offerLogic.php";
+    $offerLogic = new OfferLogic();
+    $allOffersArray = $offerLogic->GetAllOffers();
+
+    $passArray = array();
+    foreach($allOffersArray as $offer){
+        $passArray[] = array($offer->getOfferId(), $offer->getBrand(), $offer->getModel());
+    }
+    $currentPage = "Pending Offers";
+    include "shared/adminNav.php";   
 ?>
 
+<script> var passedArray = <?php echo json_encode($passArray); ?>;</script>
+
 <body>
-    
-    <?php 
-        $currentPage = "Pending Offers";
-        include "shared/adminNav.php"; 
-    ?>
 
     <div class="pending_offer_content">
         <div class="pending_cars_list">
             <form action="" class="pending_offers_listbox">
-                <select name="" id="" size="10">
-                    <option value="">user: averageuser@gmail.com, brand: bmw, model: m3</option>
-                    <option value="">user: notaverageuser@gmail.com, brand: honda, model: civic</option>
+                <select name="" id="offer_list" size="10">
+                    
                 </select>
             </form>
         </div>
@@ -38,14 +45,15 @@
             </div>
         </div>
         <div class="pending_offer_response">
-            <form action="" class="offer_response_form">
+            <form action="sendMail.php" method="POST" class="offer_response_form">
                 <div><input type="button" name="btn_accept" id="btn_accept" value="Accept Offer"></div>
                 <div><label for="counter_offer">Counter Offer: </label></div>
                 <div><input type="text" name="counter_offer" id="counter_offer"></div>
-                <div><input type="button" name="btn_new_price" id="new_price" value="Offer new price"></div>
+                <div><input type="submit" name="btn_new_price" id="new_price" value="Offer new price"></div>
+                <input type="hidden" name="email" value="<?php print_r($email)?>"> <!-- Email value not implemented yet -->
             </form>
         </div>
     </div>
 
-
+    <script src="../js/createElement.js">window.onload = myFunction()</script>
 </body>

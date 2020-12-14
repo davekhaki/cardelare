@@ -1,6 +1,6 @@
 <?php
 require_once('dbConnection.php');
-require_once "../DAL/DTO/UserDto.php";
+require_once "../DAL/DTO/CarDto.php";
 
 class inventoryDal
 {
@@ -16,8 +16,13 @@ class inventoryDal
         $stmt = $this->con->connect()->query($sql);
 
         $result = $stmt->fetchAll();
-      
-        return $result;
+
+        foreach($result as $row) {
+            $car = new CarDto($row['car_id'], $row['brand'], $row['model'], $row['year'], $row['distance_driven'], $row['transmission'], $row['fuel_type'], $row['city'], $row['price']);
+            $cars[] = $car;
+        }
+
+        return $cars;
     }
 
     public function AddCar($brand, $model, $year, $distance, $transmission, $fuel, $city, $price, $img){

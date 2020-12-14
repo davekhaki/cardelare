@@ -6,11 +6,10 @@ class CarOverview{
     public function __construct()
     {
         $this->sql = new inventoryDal();
-
-
     }
 
     public function GetCars(){
         return $this->sql->GetAllCars();
     }
+
 }

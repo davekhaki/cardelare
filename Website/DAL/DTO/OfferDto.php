@@ -1,20 +1,19 @@
-<?php 
+<?php
 
-class CarDto { 
-
-      private int $carId;
+class OfferDto{
+      private int $offerId;
       private string $brand;
       private string $model;
-      private string $year;
+      private int $year;
       private int $distanceDriven;
       private string $transmission;
       private string $fuel;
       private string $city;
       private int $price;
 
-      public function __construct(int $carId, string $brand, string $model, string $year, int $distanceDriven, string $transmission, string $fuel, string $city, int $price)
+      public function __construct(int $offerId, string $brand, string $model, int $year, int $distanceDriven, string $transmission, string $fuel, string $city, int $price)
       {
-            $this->carId = $carId; 
+            $this->offerId = $offerId; 
             $this->brand = $brand;
             $this->model = $model;
             $this->year = $year;
@@ -25,8 +24,8 @@ class CarDto {
             $this->price = $price;
       }
 
-      public function getCarId():string{
-            return strval($this->carId);
+      public function getOfferId():int{
+            return intval($this->offerId);
       }
 
       public function getBrand():string{
@@ -60,6 +59,7 @@ class CarDto {
       public function getPrice():int{
             return intval($this->price);
       }
+   
 }
 
 ?>

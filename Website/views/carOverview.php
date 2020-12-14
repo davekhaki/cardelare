@@ -27,21 +27,18 @@ if (isset($_SESSION['role']) && $_SESSION['role'] != "admin") {
                 <th>Fuel Type</th>
                 <th>City</th>
                 <th>Price</th>
-                <th>Image</th>
-
             </tr>
-            <?php foreach ($arr as $rows) : ?>
+            <?php foreach ($arr as $car) : ?>
                 <tr class="car_row">
-                    <td> <?php print_r($rows['car_id']) ?> </td>
-                    <td> <?php print_r($rows['brand']) ?> </td>
-                    <td> <?php print_r($rows['model']) ?> </td>
-                    <td> <?php print_r($rows['year']) ?> </td>
-                    <td> <?php print_r($rows['distance_driven']) ?> </td>
-                    <td> <?php print_r($rows['transmission']) ?> </td>
-                    <td> <?php print_r($rows['fuel_type']) ?> </td>
-                    <td> <?php print_r($rows['city']) ?> </td>
-                    <td> <?php print_r($rows['price']) ?> </td>
-                    <td> <?php echo '<img src="data:image/jpeg;base64,' . base64_encode($rows['img']) . '"/>'; ?> </td>
+                    <td> <?php print_r($car->getCarId()) ?> </td>
+                    <td> <?php print_r($car->getBrand()) ?> </td>
+                    <td> <?php print_r($car->getModel()) ?> </td>
+                    <td> <?php print_r($car->getYear()) ?> </td>
+                    <td> <?php print_r($car->getDistance()) ?> </td>
+                    <td> <?php print_r($car->getTransmission()) ?> </td>
+                    <td> <?php print_r($car->getFuel()) ?> </td>
+                    <td> <?php print_r($car->getCity()) ?> </td>
+                    <td> <?php print_r($car->getPrice()) ?> </td>
                 </tr>
             <?php endforeach; ?>
         </table>

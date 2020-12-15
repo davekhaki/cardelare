@@ -12,7 +12,7 @@
 
     $passArray = array();
     foreach($allOffersArray as $offer){
-        $passArray[] = array($offer->getOfferId(), $offer->getBrand(), $offer->getModel());
+        $passArray[] = array($offer->getOfferId(), $offer->getBrand(), $offer->getModel(), $offer->getYear(), $offer->getDistance(), $offer->getTransmission(), $offer->getFuel(), $offer->getCity(), $offer->getPrice(), $offer->getUserId());
     }
     $currentPage = "Pending Offers";
     include "shared/adminNav.php";   
@@ -35,13 +35,13 @@
                 <img src="https://via.placeholder.com/150">
             </div>
             <div class="pending_car_detail">
-                <div><p>Brand:</p><input type="text"></div>
-                <div><p>Model:</p><input type="text"></div>
-                <div><p>City:</p><input type="text"></div>
-                <div><p>Distance Driven:</p><input type="text"></div>
-                <div><p>Production Year:</p><input type="text"></div>
-                <div><p>Fuel Type:</p><input type="text"></div>
-                <div><p>Transmission:</p><input type="text"></div>
+                <div><p>Brand:</p><input type="text" id="brand"></div>
+                <div><p>Model:</p><input type="text" id="model"></div>
+                <div><p>City:</p><input type="text" id="city"></div>
+                <div><p>Distance Driven:</p><input type="text" id="distance"></div>
+                <div><p>Production Year:</p><input type="text" id="production_year"></div>
+                <div><p>Fuel Type:</p><input type="text" id="fuel"></div>
+                <div><p>Transmission:</p><input type="text" id="transmission"></div>
             </div>
         </div>
         <div class="pending_offer_response">
@@ -55,5 +55,5 @@
         </div>
     </div>
 
-    <script src="../js/createElement.js">window.onload = myFunction()</script>
+    <script src="../js/createElement.js">window.onload = populateListbox()</script>
 </body>

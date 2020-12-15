@@ -8,3 +8,5 @@
       <link rel="stylesheet" href="../styles.css">
       <title>Document</title>
 </head>
+
+<script src="../js/jquery-3.5.1.min.js"></script>

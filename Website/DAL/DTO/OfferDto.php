@@ -2,6 +2,7 @@
 
 class OfferDto{
       private int $offerId;
+      private int $userId;
       private string $brand;
       private string $model;
       private int $year;
@@ -11,7 +12,8 @@ class OfferDto{
       private string $city;
       private int $price;
 
-      public function __construct(int $offerId, string $brand, string $model, int $year, int $distanceDriven, string $transmission, string $fuel, string $city, int $price)
+
+      public function __construct(int $offerId, string $brand, string $model, int $year, int $distanceDriven, string $transmission, string $fuel, string $city, int $price, int $userId)
       {
             $this->offerId = $offerId; 
             $this->brand = $brand;
@@ -22,10 +24,15 @@ class OfferDto{
             $this->fuel = $fuel;
             $this->city = $city;
             $this->price = $price;
+            $this->userId = $userId;
       }
 
       public function getOfferId():int{
             return intval($this->offerId);
+      }
+
+      public function getUserId():int{
+            return intval($this->userId);
       }
 
       public function getBrand():string{

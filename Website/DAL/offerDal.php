@@ -16,7 +16,7 @@ class OfferDal{
         $result = $stmt->fetchAll();
 
         foreach($result as $res) {
-            $res = new OfferDto($res['offer_id'], $res['brand'], $res['model'], $res['year'], $res['distance_driven'], $res['transmission'], $res['fuel_type'], $res['city'], $res['offer']);
+            $res = new OfferDto($res['offer_id'], $res['brand'], $res['model'], $res['year'], $res['distance_driven'], $res['transmission'], $res['fuel_type'], $res['city'], $res['offer'], $res['user_id']);
             $offers[] = $res;
         }
 

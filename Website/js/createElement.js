@@ -1,4 +1,5 @@
 
+
 function populateListbox(item, index, arr) {
 
       var curArray = item;
@@ -27,6 +28,10 @@ $('#offer_list').change(function(){
       document.getElementById('production_year').value = offer[3];
       document.getElementById('fuel').value = offer[6];
       document.getElementById('transmission').value = offer[5];
-      console.log(offer[9]);//user id that will get used to send emails of the offer response
       document.getElementById('counter_offer').value = offer[8];
+      var clientId = document.getElementById("client_id");
+      clientId.value = offer[9]; //UserId
+      var offerId = document.getElementById("offer_id");
+      offerId.value = offer[0]; //OfferId
 });
+

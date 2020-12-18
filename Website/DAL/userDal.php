@@ -79,4 +79,15 @@ class userDal
 
         return $details;
     }
+
+    public function GetUserEmailById($id)
+    {
+        $sql = "SELECT email FROM user WHERE id = $id";
+
+        $stmt = $this->con->connect()->query($sql);
+
+        $result = $stmt->fetch();
+
+        return reset($result);
+    }
 }

@@ -19,52 +19,64 @@ $arr = $profileManager->GetRentals();
         </ul>
     </nav>
 
-
-    <div class="profile_tab_content">
-        <div class=profile_details>
-            <h2 class="profile_details_title">Profile Details</h2>
-            <div>
-                <p>First Name:</p> <?php $profileManager->GetFirstName() ?>
-            </div>
-            <div>
-                <p>Last Name:</p> <?php $profileManager->GetLastName() ?>
-            </div>
-            <div>
-                <p>Email:</p><?php $profileManager->GetEmail() ?>
-            </div>
-            <div>
-                <p>Date of Birth:</p><?php $profileManager->GetDob() ?>
-            </div>
-            <div>
-                <p>Phone Number:</p><?php $profileManager->GetPhone() ?>
-            </div>
-            <div>
-                <p>BSN:</p><input type="text">
-            </div>
-            <div>
-                <p>City:</p> <?php $profileManager->GetAddress() ?>
-            </div>
-            <div>
-                <p>Street:</p><input type="text">
-            </div>
-            <div>
-                <p>House Number:</p><input type="text">
-            </div>
-            <input type="button" value="Edit Profile Details" class="profile_edit_button">
-        </div>
-
-        <div class="profile_rent_history">
-            <?php foreach ($arr as $rows) : ?>
-                <div class="profile_rent_history_divs">
-                    <p>City:<?php $rows['end_city']  ?></p>
-                    <p>Date Rented:<?php $rows['rent_date']  ?></p>
-                    <p>Return Date:<?php $rows['return_date']  ?></p>
-                    <p>City:<?php $rows['end_city']  ?></p>
+    <form action="../Logic/editProfile.php" method="post">
+        <div class="profile_tab_content">
+            <div class=profile_details>
+                <h2 class="profile_details_title">Profile Details</h2>
+                <div>
+                    <p>First Name:</p>
+                    <input value="<?php $profileManager->GetFirstName() ?>" name="firstname">
                 </div>
-            <?php endforeach; ?>
+                <div>
+                    <p>Last Name:</p> 
+                    <input value=" <?php $profileManager->GetLastName() ?> " name="lastname">
+                </div>
+                <div>
+                    <p>Email:</p>
+                    <input value="<?php $profileManager->GetEmail() ?> " name="email">
+                </div>
+                <div>
+                    <p>Date of Birth:</p>
+                    <input value="<?php $profileManager->GetDob() ?>" name="dob">
+                </div>
+                <div>
+                    <p>Phone Number:</p>
+                    <input value="<?php $profileManager->GetPhone() ?>" name="phone">
+                </div>
+                <div>
+                    <p>BSN:</p>
+                    <input value="<?php $profileManager->GetBsn() ?>" name="bsn">
+                </div>
+                <div>
+                    <p>City:</p> 
+                    <input value="<?php $profileManager->GetCity() ?>" name="city">
+                </div>
+                <div>
+                    <p>Street:</p>
+                    <input value="<?php $profileManager->GetStreet() ?>" name="street">
+                </div>
+                <div>
+                    <p>House Number:</p>
+                    <input value="<?php $profileManager->GetHouse() ?>" name="house">
+                </div>
+                <button type="submit" value="Edit Profile Details" class="profile_edit_button">
+
+            </div>
+
+            <div class="profile_rent_history">
+                <?php foreach ($arr as $rows) : ?>
+                    <div class="profile_rent_history_divs">
+                        <p>City:<?php $rows['end_city']  ?></p>
+                        <p>Date Rented:<?php $rows['rent_date']  ?></p>
+                        <p>Return Date:<?php $rows['return_date']  ?></p>
+                        <p>City:<?php $rows['end_city']  ?></p>
+                    </div>
+                <?php endforeach; ?>
+            </div>
         </div>
-    </div>
-    <?php include "shared/footer.html" ?>
+    </form>
+
+        <?php include "shared/footer.html" ?>
 </body>
 
 </html>

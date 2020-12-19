@@ -27,7 +27,7 @@ if (isset($_SESSION['role']) && $_SESSION['role'] != "admin") {
                 <th>Fuel Type</th>
                 <th>City</th>
                 <th>Price</th>
-                <th>Image</th>
+
 
             </tr>
             <?php foreach ($arr as $rows) : ?>
@@ -41,7 +41,7 @@ if (isset($_SESSION['role']) && $_SESSION['role'] != "admin") {
                     <td> <?php print_r($rows['fuel_type']) ?> </td>
                     <td> <?php print_r($rows['city']) ?> </td>
                     <td> <?php print_r($rows['price']) ?> </td>
-                    <td> <?php echo '<img src="data:image/jpeg;base64,' . base64_encode($rows['img']) . '"/>'; ?> </td>
+                    
                 </tr>
             <?php endforeach; ?>
         </table>

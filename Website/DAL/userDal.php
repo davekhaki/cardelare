@@ -79,4 +79,30 @@ class userDal
 
         return $details;
     }
+
+    public function EditProfile($username, $firstname, $lastname, $email, $phone, $dob, $city, $bsn, $street, $house){
+        $sql = "UPDATE user 
+                SET firstname = :firstname , lastname = :lastname, email = :email , phone = :phone , dob = :dob , BSN = :bsn, city= :city, street = :street, house_nr = :house 
+                WHERE id = (
+                SELECT id 
+                FROM login 
+                WHERE username = :username)";
+            
+            $stmt = $this->con->connect()->prepare($sql);
+            $stmt->bindValue(':username', $username);
+            $stmt->bindValue(':firstname', $firstname);
+            $stmt->bindValue(':lastname', $lastname);
+            $stmt->bindValue(':email', $email);
+            $stmt->bindValue(':phone', $phone);
+            $stmt->bindValue(':dob', $dob);
+            $stmt->bindValue(':bsn', $bsn);
+            $stmt->bindValue(':city', $city);
+            $stmt->bindValue(':street', $street);
+            $stmt->bindValue(':house', $house);
+
+            $stmt->execute();
+
+            return $stmt;
+
+    }
 }

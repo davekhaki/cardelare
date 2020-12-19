@@ -12,7 +12,6 @@ class OfferDto{
       private string $city;
       private int $price;
 
-
       public function __construct(int $offerId, string $brand, string $model, int $year, int $distanceDriven, string $transmission, string $fuel, string $city, int $price, int $userId)
       {
             $this->offerId = $offerId; 

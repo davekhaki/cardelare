@@ -21,38 +21,39 @@
             <input type="file" accept="image/*" onchange="loadImage(event)">
         </div>
 
-        <div class="car_details">
+        <form class="car_details" action="../Logic/offerLogic.php" method="POST">
             <div>
-                <input type="text" id="brand" placeholder="Brand">
+                <input type="text" id="brand" name="brand" placeholder="Brand">
             </div>
             <div>
-                <input type="text" id="model" placeholder="Model">
+                <input type="text" id="model" name="model" placeholder="Model">
             </div>
             <div>
-                <input type="text" id="year" placeholder="Year Produced">
+                <input type="text" id="year" name="year" placeholder="Year Produced">
             </div>
             <div>
-                <input type="text" id="distance_driven" placeholder="Distance Driven">
+                <input type="text" id="distance_driven" name="distance_driven" placeholder="Distance Driven">
             </div>
             <div>
-                <input type="text" id="transmission" placeholder="Transmission">
+                <input type="text" id="transmission" name="transmission" placeholder="Transmission">
             </div>
             <div>
-                <input type="text" id="fuel_type" placeholder="Fuel Type">
+                <input type="text" id="fuel_type" name="fuel_type" placeholder="Fuel Type">
             </div>
             <div>
-                <input type="text" id="city" placeholder="City">
+                <input type="text" id="city" name="city" placeholder="City">
             </div>
             <div>
-                <input type="text" id="price" placeholder="Price">
+                <input type="text" id="price" name="price" placeholder="Price">
             </div>
             <div class="car_sell_description">
                 <textarea placeholder="Description" id="description" cols="30" rows="3"></textarea>
             </div>
             <div class="car_details_submit">
-                <input class=offer_button type="button" value="Send Offer">
+                <input class=offer_button type="submit" value="Send Offer">
             </div>
-        </div>
+            <input type="hidden" name="user_id" id="user_id" value="<?php echo($_SESSION['id']); ?>">
+        </form>
 
         
     </div>

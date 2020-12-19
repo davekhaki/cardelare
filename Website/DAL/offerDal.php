@@ -60,4 +60,23 @@ class OfferDal{
 
         return $stmt; //why do we return? - According to other similar sql statements
     }
+
+    public function AddOffer($brand, $model, $year, $distance, $transmission, $fuel, $city, $price, $userId)
+    {
+        $sql = "INSERT INTO offers(`user_id`, `brand`, `model`, `year`, `distance_driven`, `transmission`, `fuel_type`, `city`, `offer`) VALUES (:auser_id, :brand, :model, :ayear , :distance_driven, :transmission, :fuel_type, :city, :price)";
+
+        $stmt = $this->con->connect()->prepare($sql);
+
+        $stmt->bindValue(':auser_id', $userId);
+        $stmt->bindValue(':brand', $brand);
+        $stmt->bindValue(':model', $model);
+        $stmt->bindValue(':ayear', $year);
+        $stmt->bindValue(':distance_driven', $distance);
+        $stmt->bindValue(':transmission', $transmission);
+        $stmt->bindValue(':fuel_type', $fuel);
+        $stmt->bindValue(':city', $city);
+        $stmt->bindValue(':price', $price);
+
+        $stmt->execute();
+    }
 }

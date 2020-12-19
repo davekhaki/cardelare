@@ -727,4 +727,13 @@ footer img {
       
 }
 
+@media only screen and (max-width: 1050px)
+{
+      .pending_offer_content{
+            display: flex;
+            flex-direction: column;
+            padding-top: 2%;
+      }
+}
+
 /* -- Pending Offer End -- */

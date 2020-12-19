@@ -13,12 +13,26 @@ function populateListbox(item, index, arr) {
 
 window.onload
 {
-      passedArray.forEach(populateListbox);
+      
+      if(passedArray.length != 0)
+      {
+            passedArray.forEach(populateListbox);
+      }
+      else
+      {
+            console.log("No offers");
+            var listBox = document.getElementById('offer_list');  
+            var option = document.createElement('option');  
+            var elemText = document.createTextNode("Currently there are no offers");
+            option.appendChild(elemText);
+            listBox.appendChild(option);
+            $('#offer_list').attr("disabled", true);
+      }
+
 }
 
 
 $('#offer_list').change(function(){
-      //$('body').css({background:'blue'});
       var listBox = document.getElementById('offer_list');  
       var offer = passedArray[listBox.selectedIndex]
       document.getElementById('brand').value = offer[1];

@@ -1,6 +1,8 @@
 <?php
+
 require_once('dbConnection.php');
-require_once "../DAL/DTO/OfferDto.php";
+require_once("../DAL/DTO/OfferDto.php");
+
 class OfferDal{
     private dbConnection $con;
 
@@ -13,14 +15,37 @@ class OfferDal{
     {
         $sql = "SELECT * FROM offers";
         $stmt = $this->con->connect()->query($sql);
-        $result = $stmt->fetchAll();
+        $offers = array();
 
-        foreach($result as $res) {
-            $res = new OfferDto($res['offer_id'], $res['brand'], $res['model'], $res['year'], $res['distance_driven'], $res['transmission'], $res['fuel_type'], $res['city'], $res['offer'], $res['user_id']);
-            $offers[] = $res;
+        try
+        {
+            $result = $stmt->fetchAll();
+
+            foreach($result as $res) {
+                $res = new OfferDto($res['offer_id'], $res['brand'], $res['model'], $res['year'], $res['distance_driven'], $res['transmission'], $res['fuel_type'], $res['city'], $res['offer'], $res['user_id']);
+                $offers[] = $res;
+            }
+        }
+        catch(Exception $e)
+        {
+
         }
 
         return $offers;
+    }
+
+    public function GetOfferById($offerId)
+    {
+        $sql = "SELECT * FROM offers WHERE offer_id = $offerId";
+        $stmt = $this->con->connect()->query($sql);
+        $result = $stmt->fetchAll();
+        foreach($result as $res)
+        {
+            $offer = new OfferDto($res['offer_id'], $res['brand'], $res['model'], $res['year'], $res['distance_driven'], $res['transmission'], $res['fuel_type'], $res['city'], $res['offer'], $res['user_id']);
+        }
+        
+
+        return $offer;
     }
 
     public function DeleteOffer($offerId)

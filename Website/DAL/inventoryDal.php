@@ -25,9 +25,9 @@ class inventoryDal
         return $cars;
     }
 
-    public function AddCar($brand, $model, $year, $distance, $transmission, $fuel, $city, $price, $img){
-        $sql = " INSERT INTO inventory (brand, model, year, distance_driven, transmission, fuel_type, city, price, img) 
-                    VALUES (:brand, :model, :ayear , :distance_driven, :transmission, :fuel_type, :city, :price, :img);";
+    public function AddCar($brand, $model, $year, $distance, $transmission, $fuel, $city, $price){
+        $sql = " INSERT INTO inventory (brand, model, year, distance_driven, transmission, fuel_type, city, price) 
+                    VALUES (:brand, :model, :ayear , :distance_driven, :transmission, :fuel_type, :city, :price);";
         $stmt = $this->con->connect()->prepare($sql);
 
         $stmt->bindValue(':brand', $brand);
@@ -38,7 +38,6 @@ class inventoryDal
         $stmt->bindValue(':fuel_type', $fuel);
         $stmt->bindValue(':city', $city);
         $stmt->bindValue(':price', $price);
-        $stmt->bindValue(':img', $img);
 
         $stmt->execute();
 

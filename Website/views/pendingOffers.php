@@ -11,9 +11,16 @@
     $allOffersArray = $offerLogic->GetAllOffers();
 
     $passArray = array();
-    foreach($allOffersArray as $offer){
-        $passArray[] = array($offer->getOfferId(), $offer->getBrand(), $offer->getModel(), $offer->getYear(), $offer->getDistance(), $offer->getTransmission(), $offer->getFuel(), $offer->getCity(), $offer->getPrice(), $offer->getUserId());
+
+    if($allOffersArray != null) 
+    {
+        foreach($allOffersArray as $offer)
+        {
+            $passArray[] = array($offer->getOfferId(), $offer->getBrand(), $offer->getModel(), $offer->getYear(), $offer->getDistance(), $offer->getTransmission(), $offer->getFuel(), $offer->getCity(), $offer->getPrice(), $offer->getUserId());
+        }
+        
     }
+
     $currentPage = "Pending Offers";
     include "shared/adminNav.php";   
 ?>
@@ -46,6 +53,8 @@
         </div>
         <div class="pending_offer_response">
             <form action="../Logic/sendMail.php" method="POST" class="offer_response_form">
+                <div><label for="rental_price_input">Rental Price:</label></div>
+                <div><input type="text" name="rental_price" id="rental_price_input"></div>
                 <div><input type="submit" name="btn_accept" id="btn_accept" value="Accept Offer"></div>
                 <div><label for="counter_offer">Counter Offer: </label></div>
                 <div><input type="text" name="counter_offer" id="counter_offer"></div>

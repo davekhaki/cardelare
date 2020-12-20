@@ -65,4 +65,21 @@ class inventoryDal
       
         return reset($result);
     }
+
+    public function Search($brand){
+        $start = "%";
+        $start .= $brand; 
+        $brand .= "%";
+        $sql = "SELECT * FROM inventory WHERE brand LIKE :brand"; 
+
+        $stmt = $this->con->connect()->prepare($sql);
+        
+        $stmt->bindValue(':brand', $brand);
+
+        $stmt->execute();
+
+        $result = $stmt->fetchAll();
+      
+        return $result;
+    }
 }

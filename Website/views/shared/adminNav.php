@@ -6,6 +6,7 @@
                     echo $currentPage;
                 ?>
             </li>
+            <li><a href="carOverview.php"><img src="../Images/navBar/Car Overview.png" " alt=""></a></li>
             <li><a href="addcar.php"><img src="../Images/navBar/Add Car.png " alt=""></a></li>
             <li><a href="pendingOffers.php"><img src="../Images/navBar/Sell Car.png" alt=""></a></li>
             <li><a href="../Logic/logout.php"><img src="../Images/navBar/Exit.png" alt=""></a></li>

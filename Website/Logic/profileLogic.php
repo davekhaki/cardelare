@@ -6,6 +6,8 @@ class Profile{
     private userDal $userDal;
     private RentalDal $rentalDal;
 
+    private string $tempusername;
+
     private array $profileDetails;
     private array $allRentals;
 
@@ -14,8 +16,14 @@ class Profile{
         $this->userDal = new userDal();
         $this->rentalDal = new RentalDal();
 
+        $this->tempusername = $username;
+
         $this->profileDetails = $this->userDal->GetProfileDetails($username);
         $this->allRentals = $this->rentalDal->GetAllRentalsForUser($username);
+    }
+
+    public function EditProfileInfo($firstname, $lastname, $email, $phone, $dob, $city, $bsn, $street, $house){
+        $this->userDal->EditProfile($this->tempusername, $firstname, $lastname, $email, $phone, $dob, $city, $bsn, $street, $house);
     }
 
     public function GetFirstName(){
@@ -38,8 +46,20 @@ class Profile{
         return print_r($this->profileDetails['dob']);
     }
 
-    public function GetAddress(){
-        return print_r($this->profileDetails['address']);
+    public function GetCity(){
+        return print_r($this->profileDetails['city']);
+    }
+
+    public function GetBsn(){
+        return print_r($this->profileDetails['BSN']);
+    }
+
+    public function GetStreet(){
+        return print_r($this->profileDetails['street']);
+    }
+
+    public function GetHouse(){
+        return print_r($this->profileDetails['house_nr']);
     }
 
     public function GetRentals(){

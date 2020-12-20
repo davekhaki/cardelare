@@ -1,15 +1,15 @@
-html{
+html {
       height: 100%;
 }
 
-body{
+body {
       display: flex;
       flex-direction: column;
       margin: 0px;
       min-height: 100%;
 }
 
-a{
+a {
       color: inherit;
 }
 
@@ -34,12 +34,11 @@ nav {
       font-size: 20px;
 }
 
-@media only screen and (max-width: 1050px){
-      .nav_ul_items img{
+@media only screen and (max-width: 1050px) {
+      .nav_ul_items img {
             height: 35px;
       }
-
-      .nav_ul_items li{
+      .nav_ul_items li {
             padding-left: 10px;
             padding-right: 10px;
             text-align: center;
@@ -59,7 +58,7 @@ nav {
 .adminNav_ul_items {
       list-style-type: none;
       display: grid;
-      grid-template-columns: 2fr 10fr 1fr 1fr 1fr;
+      grid-template-columns: 2fr 10fr 1fr 1fr 1fr 1fr;
       padding-inline-start: 0px;
       margin-block-end: 1%;
       align-items: center;
@@ -68,12 +67,11 @@ nav {
       font-size: 20px;
 }
 
-@media only screen and (max-width: 1050px){
-      .adminNav_ul_items img{
+@media only screen and (max-width: 1050px) {
+      .adminNav_ul_items img {
             height: 35px;
       }
-
-      .adminNav_ul_items li{
+      .adminNav_ul_items li {
             padding-left: 10px;
             padding-right: 10px;
             text-align: center;
@@ -113,7 +111,6 @@ footer img {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      
 }
 
 .contact_us {
@@ -127,6 +124,7 @@ footer img {
 /* --Footer End-- */
 
 /* Home Page */
+
 .home_html {
       background-image: url(Images/Background.jpg);
       background-repeat: no-repeat;
@@ -179,65 +177,64 @@ footer img {
 
 /* Register page styles */
 
-.register_form{
+.register_form {
       text-align: center;
-     
 }
-.register_container{
+
+.register_container {
       border: 2px solid lightslategrey;
       display: flex;
       flex-direction: column;
       align-self: center;
       margin-top: 7%;
       width: 60%;
-      
 }
 
-.register_have_account{
+.register_have_account {
       margin: 4%;
 }
 
-.register_container h1{
+.register_container h1 {
       text-align: center;
 }
 
-.register_terms{
+.register_terms {
       margin-top: 3%;
       text-align: center;
       width: auto;
 }
 
-.register_input{
+.register_input {
       font-size: 20px;
       width: 50%;
       height: 30px;
       margin: 1%;
-
 }
-.register_button{
+
+.register_button {
       margin-top: 3%;
       margin-bottom: 2%;
       text-align: center;
 }
 
-.register_button button{
+.register_button button {
       padding-left: 10px;
       padding-right: 10px;
       width: min-content;
 }
 
-@media only screen and (max-width: 1050px){
-      .register_input{
+@media only screen and (max-width: 1050px) {
+      .register_input {
             width: 35vw;
             font-size: 15px;
             height: 20px;
       }
 }
 
-
 /* -- Register Styles End -- */
 
 /* Login styles */
+
 .login-container {
       margin-top: 5%;
       text-align: center;
@@ -269,24 +266,20 @@ footer img {
       padding-bottom: 20px;
 }
 
-@media only screen and (max-width: 1050px)
-{
-      .form-group{
+@media only screen and (max-width: 1050px) {
+      .form-group {
             margin-top: 3%;
       }
-
-      .login-container{
+      .login-container {
             margin-right: auto;
             margin-left: auto;
             width: 60%;
       }
-
-      .form-group input{
+      .form-group input {
             width: 30vw;
             font-size: 15px;
       }
-
-      .login-btn{
+      .login-btn {
             margin-top: 3%;
             height: 25px;
             width: 25%;
@@ -296,125 +289,113 @@ footer img {
 /* -- Log in Styles End --*/
 
 /* Sell Page Styles */
-.sell_form{
+
+.sell_form {
       margin: 10px;
       display: grid;
       grid-template-columns: 1fr 2fr;
 }
 
-.car_image{
+.car_image {
       display: flex;
       flex-direction: column;
 }
 
-.uploaded_image{
+.uploaded_image {
       width: 100%;
       height: 50vh;
       margin-bottom: 1%;
 }
 
-.car_details{
-      margin:40px;
+.car_details {
+      margin: 40px;
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       grid-template-rows: repeat(4, 1fr);
 }
 
-.car_sell_description{
-      
+.car_sell_description {
       grid-column-start: 1;
       grid-column-end: 5;
 }
 
-.car_sell_description textarea{
+.car_sell_description textarea {
       width: 96%;
       height: 90%;
-      
 }
 
-.car_details div{
+.car_details div {
       text-align: center;
 }
 
-.car_details_submit{
+.car_details_submit {
       grid-column-start: 2;
       grid-column-end: 4;
       justify-self: center;
       align-self: center;
 }
 
-.car_details_input{
+.car_details_input {
       padding: 20px;
       display: flex;
       flex-direction: column;
 }
 
-@media only screen and (max-width: 1050px){
-
+@media only screen and (max-width: 1050px) {
       /* navbar responsive */
-      .nav_ul_items{
+      .nav_ul_items {
             grid-template-columns: 2fr 10fr 1fr 1fr;
       }
-
-      .sell_form{
+      .sell_form {
             display: flex;
             flex-direction: column;
       }
-
-      .car_details{
+      .car_details {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: repeat(7, 1fr);
             margin: 0px;
-            
       }
-
-      .car_details div{
+      .car_details div {
             align-self: center;
             margin: 0px;
             padding-top: 5%;
             padding-bottom: 5%;
       }
-
-      .car_sell_description{
+      .car_sell_description {
             grid-column-start: 1;
             grid-column-end: 3;
             grid-row-start: 5;
             grid-row-end: 7;
             height: 90%;
       }
-
-      .car_details_submit{
+      .car_details_submit {
             grid-column-start: 1;
             grid-column-end: 3;
             justify-self: center;
       }
-
-
 }
 
 /* -- Sell Page End -- */
 
-
-
 /* Profile */
 
-.profile_tab_content{
+.profile_tab_content {
       margin-top: auto;
       margin-left: 5px;
       margin-right: 5px;
       display: grid;
-      gap: 10px;  
+      gap: 10px;
       grid-template-columns: 1fr 1fr 1fr;
 }
 
-.profile_details_title{
+.profile_details_title {
       grid-column-start: 1;
       grid-column-end: 4;
       align-self: flex-end;
 }
 
-.profile_details{
+.profile_details {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       justify-items: center;
@@ -422,23 +403,23 @@ footer img {
       border: 2px solid black;
 }
 
-.profile_details div{
+.profile_details div {
       height: min-content;
       align-self: flex-end;
 }
 
-.profile_details p{
+.profile_details p {
       text-align: center;
 }
 
-.profile_edit_button{   
+.profile_edit_button {
       height: 30px;
       grid-column-start: 2;
       grid-column-end: 3;
       align-self: center;
 }
 
-.profile_rent_history{
+.profile_rent_history {
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
@@ -447,10 +428,9 @@ footer img {
       gap: 2px;
       height: 100%;
       overflow-y: auto;
-      
 }
 
-.profile_rent_history > div{
+.profile_rent_history>div {
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr 1fr 1fr;
@@ -458,66 +438,57 @@ footer img {
       border: 2px solid black;
 }
 
-.profile_rent_history_divs{
+.profile_rent_history_divs {
       padding-top: 5%;
       justify-items: center;
 }
 
-
-.profile_rent_history img{
+.profile_rent_history img {
       justify-self: center;
       grid-row-start: 1;
       grid-row-end: 3;
 }
 
-@media only screen and (max-width: 1050px){
-
+@media only screen and (max-width: 1050px) {
       /* navbar responsive */
-      .nav_ul_items{
+      .nav_ul_items {
             grid-template-columns: 2fr 10fr 1fr 1fr;
       }
-
       .profile_tab_content {
             display: flex;
             flex-direction: column;
       }
-
       .profile_details {
             display: grid;
             column-gap: 2px;
             grid-template-columns: 1fr 1fr;
             grid-template-rows: repeat(5, 1fr);
       }
-
-      .profile_details div{
+      .profile_details div {
             align-self: center;
       }
-
       .profile_details_title {
             align-self: center;
             grid-column-start: unset;
             grid-column-end: unset;
       }
-
-      .profile_edit_button{
+      .profile_edit_button {
             margin-top: 3%;
             margin-bottom: 3%;
             grid-column-start: 1;
             grid-column-end: 3;
       }
-
-      .profile_rent_history{
+      .profile_rent_history {
             display: flex;
             flex-direction: column;
       }
 }
 
-
 /* --Profile End-- */
 
 /* Result Page */
 
-.result_page{
+.result_page {
       margin-top: auto;
       display: grid;
       grid-template-columns: 1fr 6fr;
@@ -527,20 +498,20 @@ footer img {
       height: 80vh;
 }
 
-.result_page_results > div{
+.result_page_results>div {
       border: 2px solid black;
 }
 
-.result_page_results{
+.result_page_results {
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
       gap: 5px;
-      overflow-x: hidden; 
+      overflow-x: hidden;
       overflow-y: scroll;
 }
 
-.result_page_results div{
+.result_page_results div {
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr 1fr 1fr;
@@ -551,52 +522,47 @@ footer img {
       grid-row-end: 3;
 }
 
-.result_page_filters{
+.result_page_filters {
       display: grid;
       grid-template-rows: repeat(9, 1fr);
       border: 2px solid black;
 }
 
-
-.result_page_filters p{
+.result_page_filters p {
       margin-bottom: 2px;
 }
 
-.result_page_filters div{
+.result_page_filters div {
       text-align: center;
 }
 
-.result_page_price_range{
+.result_page_price_range {
       width: 64px;
 }
 
-.result_page_submit_filter{
+.result_page_submit_filter {
       width: 50%;
-      height: 40%;      
+      height: 40%;
       justify-self: center;
       align-self: center;
 }
 
-@media only screen and (max-width: 1050px)
-{
-      .result_page{
+@media only screen and (max-width: 1050px) {
+      .result_page {
             display: flex;
             flex-direction: column;
             gap: 5px;
       }
-
-      .result_page_filters{
+      .result_page_filters {
             display: grid;
             grid-template-columns: 1fr 1fr;
             grid-template-rows: repeat(5, 1fr);
       }
-
-      .result_page_submit_filter{
+      .result_page_submit_filter {
             grid-column-start: 1;
             grid-column-end: 3;
       }
-
-      .result_page_results{
+      .result_page_results {
             display: flex;
             flex-direction: column;
       }
@@ -613,118 +579,136 @@ footer img {
       background-color: lightblue;
       padding: 10px;
       margin: 5%;
-      
-    }
-    .grid-item {
+}
+
+.grid-item {
       grid-row: span 2;
       background-color: rgba(255, 255, 255, 0.8);
       padding: 20px;
       padding-bottom: 15%;
       font-size: 30px;
       text-align: center;
-      
 }
+
 /* -- Admin Overview Page End -- */
 
 /* Car Overview Page Start */
-.car_overview_table_div{
-      overflow-x:auto;
+
+.car_overview_table_div {
+      overflow-x: auto;
 }
-.car_overview_table{
+
+.car_overview_table {
       width: 65%;
       margin-left: auto;
       margin-right: auto;
       margin-top: 10%;
       border: 1px solid black;
       border-collapse: collapse;
-      
 }
-.car_row_main{
+
+.car_row_main {
       background-color: lightblue;
       color: white;
 }
-.car_row, td{
+
+.car_row, td {
       text-align: left;
       vertical-align: bottom;
       padding: 10px;
       border: 1px solid black;
       border-bottom: 1px solid #ddd;
 }
-.car_row:hover {background-color: #f5f5f5;}
+
+.car_row:hover {
+      background-color: #f5f5f5;
+}
+
 /* Car Overview Page End */
 
 /* Add Car Page Start */
-.add_car_form{
+
+.add_car_form {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       grid-template-rows: 4fr 1fr;
+      padding: 2%;
 }
-.grid_item_4{
+
+.grid_item_4 {
       grid-column-start: 1;
       grid-column-end: 5;
       justify-self: center;
-      
 }
-.add_button{
+
+.grid_item_2 {
+      background-color: lightblue;
+}
+
+.grid_item_3 {
+      background-color: lightblue;
+}
+
+.add_button {
       background-color: #555555;
-      color:white;
+      color: white;
       padding: 15px 32px;
-  text-align: center;
-      
+      text-align: center;
+      background-color: blue;
 }
-.small_items_grid{
+
+.small_items_grid {
       display: grid;
       row-gap: 30%;
 }
+
 /* Add Car Page End */
-/* -- Admin Overview Page End -- */
 
 /* Pending Offer Page Start */
 
-.pending_offer_content{
+.pending_offer_content {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       padding-top: 2%;
 }
 
-.pending_offer_content > div{
+.pending_offer_content>div {
       background-color: seagreen;
       width: 95%;
       height: 80vh;
       justify-self: center;
 }
 
-.selected_car_info{
+.selected_car_info {
       display: flex;
       flex-direction: column;
 }
 
-.pending_car_image{
+.pending_car_image {
       align-self: center;
       margin-top: 7%;
 }
 
-.pending_car_detail{
+.pending_car_detail {
       display: grid;
       grid-template-columns: 1fr 1fr;
       text-align: center;
 }
 
-.offer_response_form{
+.offer_response_form {
       display: flex;
       flex-direction: column;
       text-align: center;
       margin-top: 35%;
 }
 
-.offer_response_form div{
+.offer_response_form div {
       margin-top: 5%;
 }
 
-.pending_offers_listbox{
+.pending_offers_listbox {
       text-align: center;
       margin-top: 40%;
-      
 }
 
 @media only screen and (max-width: 1050px)

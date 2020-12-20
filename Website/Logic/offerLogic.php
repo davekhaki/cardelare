@@ -19,7 +19,6 @@ class OfferLogic{
       public function SendInitOffer($brand, $model, $year, $distance, $transmission, $fuel, $city, $price, $userId)
       {
             $this->sql->AddOffer($brand, $model, $year, $distance, $transmission, $fuel, $city, $price, $userId);
-            header("../views/sellcar.php");
       }
 
 }
@@ -29,6 +28,7 @@ $offer = new OfferLogic();
 if($_SERVER["REQUEST_METHOD"] == "POST")
 {
       $offer->SendInitOffer($_POST['brand'], $_POST['model'], $_POST['year'], $_POST['distance_driven'], $_POST['transmission'], $_POST['fuel_type'], $_POST['city'], $_POST['price'], $_POST['user_id']);
+      header('Location: ../views/profile.php');
 }
 
 

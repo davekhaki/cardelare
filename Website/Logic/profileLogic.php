@@ -51,7 +51,7 @@ class Profile{
     }
 
     public function GetBsn(){
-        return print_r($this->profileDetails['BSN']);
+        return print_r($this->profileDetails['bsn']);
     }
 
     public function GetStreet(){
@@ -59,7 +59,7 @@ class Profile{
     }
 
     public function GetHouse(){
-        return print_r($this->profileDetails['house_nr']);
+        return print_r($this->profileDetails['house']);
     }
 
     public function GetRentals(){

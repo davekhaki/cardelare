@@ -78,5 +78,6 @@ class OfferDal{
         $stmt->bindValue(':price', $price);
 
         $stmt->execute();
+
     }
 }

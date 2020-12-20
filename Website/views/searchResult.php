@@ -5,6 +5,7 @@ include "shared/header.php";
 $search = $_SESSION['search'];
 
 $array = $_SESSION['result'];
+
 ?>
 
 <body>
@@ -14,50 +15,40 @@ $array = $_SESSION['result'];
       ?>
 
       <div class="result_page">
-            <div class="result_page_filters">
-                  <div>
-                        <p>Brand:</p><input type="text">
-                  </div>
-                  <div>
-                        <p>Model:</p><input type="text">
-                  </div>
-                  <div>
-                        <p>City:</p><input type="text">
-                  </div>
-                  <div>
-                        <p>Distance Driven:</p><input type="text">
-                  </div>
-                  <div>
-                        <p>Hourly Price Range:</p><input type="number" class="result_page_price_range"> to <input type="number" class="result_page_price_range">
-                  </div>
-                  <div>
-                        <p>Production Year:</p><input type="text">
-                  </div>
-                  <div>
-                        <p>Fuel Type:</p><input type="text">
-                  </div>
-                  <div>
-                        <p>Transmission:</p><input type="text">
-                  </div>
-                  <input type="submit" value="Filter" class="result_page_submit_filter">
-            </div>
             <div class="result_page_results">
                   <!-- foreach time -->
                   <?php foreach ($array as $row) : ?>
-                        <div>
+                        <form action="../Logic/rentPreview.php" method="post">
                               <img src="https://via.placeholder.com/150">
-                              <p>Brand: <?php print_r($row['brand']) ?></p>
-                              <p>Model: <?php print_r($row['model']) ?></p>
-                              <p>Hourly Price: <?php print_r($row['price']) ?> </p>
-                              <p>Transmission: <?php print_r($row['transmission']) ?></p>
-                        </div>
+                              <div>
+                                    Brand:
+                                    <input name="resultbrand" value="<?php print_r($row['brand']) ?>" readonly>
+                              </div>
+                              <div>
+                                    Model:
+                                    <input name="resultmodel" value="<?php print_r($row['model']) ?>" readonly>
+                              </div>
+                              <div>
+                                    Transmission:
+                                    <input name="resulttransmission" value="<?php print_r($row['transmission']) ?>" readonly>
+                              </div>
+                              <button type="submit" class="rent_button">Rent Now</button>
+                              <div>
+                                    Price:
+                                    <input name="resultprice" value="<?php print_r($row['price']) ?>" readonly>
+
+                                    <input name="year" type="hidden" value="<?php print_r($row['year']) ?>">
+                                    <input name="distance" type="hidden" value="<?php print_r($row['distance_driven'])?>">
+                                    <input name="fuel" type="hidden" value="<?php print_r($row['fuel_type']) ?>">
+                                    <input name="city" type="hidden" value="<?php print_r($row['city']) ?>">
+                                    <input name="id" type="hidden" value="<?php print_r($row['car_id']) ?>">
+
+                              </div>
+                        </form>
                   <?php endforeach; ?>
             </div>
       </div>
-
-
       <?php include "shared/footer.html" ?>
-
 </body>
 
 </html>

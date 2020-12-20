@@ -29,7 +29,7 @@ $arr = $profileManager->GetRentals();
                 </div>
                 <div>
                     <p>Last Name:</p> 
-                    <input value=" <?php $profileManager->GetLastName() ?> " name="lastname">
+                    <input value="<?php $profileManager->GetLastName() ?> " name="lastname">
                 </div>
                 <div>
                     <p>Email:</p>
@@ -59,7 +59,7 @@ $arr = $profileManager->GetRentals();
                     <p>House Number:</p>
                     <input value="<?php $profileManager->GetHouse() ?>" name="house">
                 </div>
-                <button type="submit" value="Edit Profile Details" class="profile_edit_button">
+                <button type="submit" class="profile_edit_button"> Edit Profile Details
 
             </div>
 

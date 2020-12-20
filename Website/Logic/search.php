@@ -42,8 +42,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $_SESSION['search'] = $search;
     $_SESSION['result'] = $search->GetSearch();
 
-    var_dump($search->GetSearch());
-
-
     header('Location: ../views/searchResult.php');
 }

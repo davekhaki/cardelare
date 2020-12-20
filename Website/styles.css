@@ -491,15 +491,11 @@ footer img {
 .result_page {
       margin-top: auto;
       display: grid;
-      grid-template-columns: 1fr 6fr;
+      grid-template-columns: 1fr;
       margin-left: 5px;
       margin-right: 5px;
       column-gap: 5px;
       height: 80vh;
-}
-
-.result_page_results>div {
-      border: 2px solid black;
 }
 
 .result_page_results {
@@ -511,10 +507,19 @@ footer img {
       overflow-y: scroll;
 }
 
-.result_page_results div {
+.result_page_results form {
+      border: 2px solid black;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.rent_button{
+      grid-row-start: 3;
+      grid-row-end: 5;
+      padding: 5%;
+      width: 75%;
+      height: 75%;
 }
 
 .result_page_results img {

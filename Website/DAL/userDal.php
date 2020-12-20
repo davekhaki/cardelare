@@ -42,8 +42,8 @@ class userDal
     public function addNewUser($username, $password){
         //start and finish a transaction to add a new user into the user table and add their login details to the login table
         $sql = "BEGIN; 
-                INSERT INTO user (id, firstname, lastname, email, phone, dob, address) 
-                    VALUES (NULL, '','','','','','');
+                INSERT INTO user (id, firstname, lastname, email, phone, dob, city, bsn, street, house) 
+                    VALUES (NULL, '','','','','','', '', '', '');
                 INSERT INTO login (id, username, password, role)
                     VALUES(LAST_INSERT_ID(), :username, :password, 'user');
                 COMMIT;";
@@ -92,13 +92,14 @@ class userDal
 
     public function EditProfile($username, $firstname, $lastname, $email, $phone, $dob, $city, $bsn, $street, $house){
         $sql = "UPDATE user 
-                SET firstname = :firstname , lastname = :lastname, email = :email , phone = :phone , dob = :dob , BSN = :bsn, city= :city, street = :street, house_nr = :house 
+                SET firstname = :firstname , lastname = :lastname, email = :email , phone = :phone , dob = :dob , bsn = :bsn, city= :city, street = :street, house = :house 
                 WHERE id = (
                 SELECT id 
                 FROM login 
                 WHERE username = :username)";
-            
+            //indentation so the nested query is easier to read for me
             $stmt = $this->con->connect()->prepare($sql);
+
             $stmt->bindValue(':username', $username);
             $stmt->bindValue(':firstname', $firstname);
             $stmt->bindValue(':lastname', $lastname);

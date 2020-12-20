@@ -734,6 +734,26 @@ footer img {
             flex-direction: column;
             padding-top: 2%;
       }
+
+      .pending_offer_content > div{
+            background-color: seagreen;
+            height: 80vh;
+            width: 100%;
+            justify-self: center;
+      }
+
+      .pending_offers_listbox{
+            text-align: center;
+            margin-top: 25%;
+            
+      }
+
+      .offer_response_form{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            margin-top: 5%;
+      }
 }
 
 /* -- Pending Offer End -- */

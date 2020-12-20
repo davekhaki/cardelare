@@ -19,6 +19,7 @@ class OfferLogic{
       public function SendInitOffer($brand, $model, $year, $distance, $transmission, $fuel, $city, $price, $userId)
       {
             $this->sql->AddOffer($brand, $model, $year, $distance, $transmission, $fuel, $city, $price, $userId);
+            header("../views/sellcar.php");
       }
 
 }
